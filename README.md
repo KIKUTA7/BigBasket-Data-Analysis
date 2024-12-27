@@ -35,6 +35,46 @@ Category-wise statistics: Detailed insights into each category’s performance a
 
 ### Papuna Mamageishvili
 
+For this project, my primary contribution was designing and implementing the SalesProjector class, which is responsible for projecting sales and profits based on product popularity. I chose to focus on this component because I wanted to dive deeper into analyzing sales trends and creating actionable insights for businesses. The challenge of developing a system to estimate future performance intrigued me, and I believed it would be an impactful addition to our project.
+
+Why I Focused on the SalesProjector
+
+Sales projection is a critical aspect of business planning, enabling companies to allocate resources, forecast revenue, and make data-driven decisions about their product lines. I wanted to tackle this challenge because it required blending analytical and algorithmic thinking. My aim was to create a module that could take the insights from the processed dataset and transform them into meaningful projections that would directly impact decision-making.
+
+Additionally, I found it exciting to incorporate concepts like weighted scoring, sales distribution, and profitability analysis into a practical tool. These ideas are often abstract in theory, but implementing them in code gave me a better understanding of how they work in real-world scenarios.
+
+How I Developed the SalesProjector
+
+The process of building the SalesProjector involved several steps:
+
+Understanding the Dataset:
+I began by analyzing the cleaned dataset provided by the DataProcessor class to identify the key features relevant to sales and profit projection. Columns like sale_price, market_price, rating, and category became the foundation for my calculations.
+
+Designing Popularity Scores:
+I devised a scoring mechanism that combined three factors:
+
+Normalized Ratings: Higher product ratings contributed more to popularity.
+
+Category Size: Products in larger categories received slightly higher scores, as they are likely to have higher visibility.
+
+Rating Category Weights: Ratings like "Excellent" and "Good" were weighted more heavily, while lower categories contributed less to the score.
+
+These elements were weighted to ensure a balanced and fair distribution of popularity scores. Calculating these scores required careful normalization to avoid any one factor dominating the others.
+
+Projecting Sales and Profit:
+Using the popularity scores, I calculated a distribution for daily sales and scaled it up to monthly and six-month projections. To determine profitability, I used the difference between market_price and sale_price as the unit profit for each product. This allowed me to project profits alongside sales, giving a comprehensive view of performance.
+
+Visualizing the Results:
+I created visualizations to make the projections more interpretable. Charts like the top 10 products by profit, category-wise profit distribution, and the relationship between popularity and profit provided intuitive insights into the projections.
+
+Generating a Summary Report:
+To make the results actionable, I implemented a summary report that highlighted key insights, such as total projected profit, the top-performing category, and the average sales per product. This summary is meant to give decision-makers a quick overview of the most important takeaways.
+
+Challenges Faced
+
+One of the main challenges was ensuring the fairness of the popularity score calculation. With multiple factors contributing to the score, it was essential to normalize and weight them appropriately. Too much emphasis on any one factor, such as ratings or category size, would skew the projections. Iterating through different weight combinations and testing the results helped me achieve a balanced scoring mechanism.
+
+Another challenge was translating abstract sales projections into meaningful visualizations. Choosing the right type of charts and ensuring they effectively communicated the insights required trial and error. For instance, representing category-wise profits as a horizontal bar chart made the comparison between categories more intuitive.
 
  
 ### Overview
@@ -68,30 +108,32 @@ The analysis includes product ratings categorization, price analysis, and projec
   - Generates visualization of projected profits
  
 ### Project Structure
-├── BigBasket Products.csv     # Input dataset <br>
-├── requirements.txt           # Project dependencies <br>
-└── main.py                   # Main script containing all classes <br>
-    ├── DataProcessor         # Handles data loading and cleaning <br>
-    │   ├── __init__         # Initializes with file path <br>
-    │   ├── loadAndCleanData # Loads and cleans the dataset <br>
-    │   └── _handleOutliers  # Removes price outliers using IQR <br>
-    │ <br>
-    ├── DataAnalyzer         # Performs analysis and visualization <br>
-    │   ├── __init__         # Initializes with cleaned data <br>
-    │   ├── generateVisualizations  # Creates data visualizations <br>
-    │   └── generateStatistics      # Computes dataset statistics <br>
-    │ <br>
-    ├── ModelTrainer         # Implements ML models <br>
-    │   ├── __init__         # Initializes with cleaned data <br>
-    │   ├── prepareData      # Prepares data for ML models <br>
-    │   └── trainAndEvaluate # Trains and evaluates models <br>
-    │ <br>
-    └── SalesProjector       # Projects future sales and profits <br>
-        ├── __init__         # Initializes with data and projection period <br>
-        ├── _calculate_popularity_scores  # Calculates product popularity <br>
-        ├── project_sales    # Projects sales and profits <br>
-        ├── generate_projection_visualizations  # Creates projection charts <br>
-        └── generate_summary_report  # Generates projection summary <br>
+<pre>
+├── BigBasket Products.csv       # Input dataset  
+├── requirements.txt             # Project dependencies  
+└── main.py                      # Main script containing all classes  
+    ├── DataProcessor            # Handles data loading and cleaning  
+    │   ├── __init__             # Initializes with file path  
+    │   ├── loadAndCleanData     # Loads and cleans the dataset  
+    │   └── _handleOutliers      # Removes price outliers using IQR  
+    │  
+    ├── DataAnalyzer             # Performs analysis and visualization  
+    │   ├── __init__             # Initializes with cleaned data  
+    │   ├── generateVisualizations  # Creates data visualizations  
+    │   └── generateStatistics      # Computes dataset statistics  
+    │  
+    ├── ModelTrainer             # Implements ML models  
+    │   ├── __init__             # Initializes with cleaned data  
+    │   ├── prepareData          # Prepares data for ML models  
+    │   └── trainAndEvaluate     # Trains and evaluates models  
+    │  
+    └── SalesProjector           # Projects future sales and profits  
+        ├── __init__             # Initializes with data and projection period  
+        ├── _calculate_popularity_scores  # Calculates product popularity  
+        ├── project_sales        # Projects sales and profits  
+        ├── generate_projection_visualizations  # Creates projection charts  
+        └── generate_summary_report         # Generates projection summary  
+</pre>
  
 #### Class Functions Documentation
  
