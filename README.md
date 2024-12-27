@@ -1,5 +1,5 @@
 # BigBasket-Data-Analysis
-# Group Members: Beka Kikutadze, Papuna Mamageishvili, Mariami Shotniashvili, Elene Baiashvili
+## Group Members: Beka Kikutadze, Papuna Mamageishvili, Mariami Shotniashvili, Elene Baiashvili
 Final project at Kutaisi International University's computer science faculty subject "Introduction to Data Science with Python" 
 
 Beka Kikutadze: In this project, my primary responsibility was to train an AI model using a subset of the data and predict ratings for the remaining portion. To achieve this, I divided the dataset into two parts and applied machine learning algorithms to generate predictions. I conducted research to determine the optimal data split ratios and identify the most suitable algorithms for our supermarket product data.
