@@ -68,7 +68,7 @@ The analysis includes product ratings categorization, price analysis, and projec
   - Generates visualization of projected profits
  
 ### Project Structure
-├── BigBasket Products.csv     # Input dataset
+├── BigBasket Products.csv     # Input dataset <br>
 ├── requirements.txt           # Project dependencies
 └── main.py                   # Main script containing all classes
     ├── DataProcessor         # Handles data loading and cleaning
