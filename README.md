@@ -37,12 +37,12 @@ Category-wise statistics: Detailed insights into each category’s performance a
 
 
  
-## Overview
+### Overview
 This project performs comprehensive data analysis on BigBasket's product dataset, including data cleaning,
 visualization, machine learning model training, and sales projections.
 The analysis includes product ratings categorization, price analysis, and projected profit calculations based on popularity scores.
  
-## Features
+### Features
 - **Data Processing & Cleaning**
   - Handles missing values in critical columns
   - Fills missing ratings with category means
@@ -67,7 +67,7 @@ The analysis includes product ratings categorization, price analysis, and projec
   - Considers product ratings and category sizes for popularity scoring
   - Generates visualization of projected profits
  
-## Project Structure
+### Project Structure
 ├── BigBasket Products.csv     # Input dataset
 ├── requirements.txt           # Project dependencies
 └── main.py                   # Main script containing all classes
@@ -93,9 +93,9 @@ The analysis includes product ratings categorization, price analysis, and projec
         ├── generate_projection_visualizations  # Creates projection charts
         └── generate_summary_report  # Generates projection summary
  
-### Class Functions Documentation
+#### Class Functions Documentation
  
-#### DataProcessor
+##### DataProcessor
 - `__init__(filePath)`: Initializes with path to CSV file
   - Parameters: filePath (str) - Path to the dataset
   - Attributes: data, processedData (pandas DataFrames)
@@ -111,7 +111,7 @@ The analysis includes product ratings categorization, price analysis, and projec
   - Uses IQR method for sale_price and market_price
   - Returns DataFrame with outliers removed
  
-#### DataAnalyzer
+##### DataAnalyzer
 - `__init__(data)`: Initializes with cleaned dataset
   - Parameters: data (pandas DataFrame)
  
@@ -127,7 +127,7 @@ The analysis includes product ratings categorization, price analysis, and projec
     1. General statistics dictionary
     2. Category-wise statistics DataFrame
  
-#### ModelTrainer
+##### ModelTrainer
 - `__init__(data)`: Initializes with cleaned dataset
   - Parameters: data (pandas DataFrame)
   - Attributes: XTrain, XTest, yTrain, yTest for model training
@@ -141,7 +141,7 @@ The analysis includes product ratings categorization, price analysis, and projec
   - Implements Random Forest and Logistic Regression
   - Returns dictionary with classification reports and confusion matrices
  
-#### SalesProjector
+##### SalesProjector
 - `__init__(data, projection_months=6)`: Initializes projector
   - Parameters:
     - data (pandas DataFrame)
@@ -163,22 +163,22 @@ The analysis includes product ratings categorization, price analysis, and projec
 - `generate_summary_report(projections)`: Creates summary
   - Returns dictionary with key projection metrics
  
-## Installation
+### Installation
 1. Clone the repository
 2. Create a virtual environment:
    python -m venv venv
    source venv/bin/activate  
-### On Windows: venv\Scripts\activate
+#### On Windows: venv\Scripts\activate
 3. Install required packages:
    pip install -r Requirements.txt 
  
-## Usage
+### Usage
 1. Ensure your dataset "BigBasket Products.csv" is in the project directory
    Dataset link: https://www.kaggle.com/datasets/surajjha101/bigbasket-entire-product-list-28k-datapoints
 2. Run the main script:
    python main.py
  
-## Output
+### Output
 The script will generate:
 - Visualizations for product analysis
 - Statistical reports
@@ -186,7 +186,7 @@ The script will generate:
 - Sales projections and profit analysis
 - Summary reports with key metrics
  
-## Data Requirements
+### Data Requirements
 The input CSV file should contain the following columns:
 - index
 - product
