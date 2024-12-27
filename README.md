@@ -34,48 +34,15 @@ General statistics: Metrics like average ratings, average discounts, and price r
 Category-wise statistics: Detailed insights into each category’s performance allow for targeted strategies to improve specific product groups.
 
 ### Papuna Mamageishvili
+In this project, my primary contribution was the SalesProjector class, which focuses on projecting sales and profits for products based on popularity scores. I designed this module to assist businesses in identifying top-performing items and optimizing their inventory strategies.
 
-For this project, my primary contribution was designing and implementing the SalesProjector class, which is responsible for projecting sales and profits based on product popularity. I chose to focus on this component because I wanted to dive deeper into analyzing sales trends and creating actionable insights for businesses. The challenge of developing a system to estimate future performance intrigued me, and I believed it would be an impactful addition to our project.
+The core challenge was creating a meaningful metric—popularity scores—to rank products effectively. To address this, I combined normalized product ratings, category sizes, and weighted rating categories into a comprehensive scoring system. This metric was then used to distribute base daily sales and calculate potential profits over a six-month period.
 
-Why I Focused on the SalesProjector
+I included multiple visualizations, such as bar charts for top products by profit, category-wise profit distributions, and scatterplots showing popularity versus profit. These visual aids help stakeholders easily interpret results. Additionally, I developed a summary report that highlights key insights like total projected profit, average monthly sales, and the top-performing category.
 
-Sales projection is a critical aspect of business planning, enabling companies to allocate resources, forecast revenue, and make data-driven decisions about their product lines. I wanted to tackle this challenge because it required blending analytical and algorithmic thinking. My aim was to create a module that could take the insights from the processed dataset and transform them into meaningful projections that would directly impact decision-making.
+Implementing the SalesProjector deepened my understanding of integrating data-driven calculations with real-world applications. I enjoyed the process of blending analytical thinking with programming to deliver actionable insights for businesses. By working on this module, I aimed to ensure the project goes beyond data analysis and becomes a practical tool for decision-making.
 
-Additionally, I found it exciting to incorporate concepts like weighted scoring, sales distribution, and profitability analysis into a practical tool. These ideas are often abstract in theory, but implementing them in code gave me a better understanding of how they work in real-world scenarios.
-
-How I Developed the SalesProjector
-
-The process of building the SalesProjector involved several steps:
-
-Understanding the Dataset:
-I began by analyzing the cleaned dataset provided by the DataProcessor class to identify the key features relevant to sales and profit projection. Columns like sale_price, market_price, rating, and category became the foundation for my calculations.
-
-Designing Popularity Scores:
-I devised a scoring mechanism that combined three factors:
-
-Normalized Ratings: Higher product ratings contributed more to popularity.
-
-Category Size: Products in larger categories received slightly higher scores, as they are likely to have higher visibility.
-
-Rating Category Weights: Ratings like "Excellent" and "Good" were weighted more heavily, while lower categories contributed less to the score.
-
-These elements were weighted to ensure a balanced and fair distribution of popularity scores. Calculating these scores required careful normalization to avoid any one factor dominating the others.
-
-Projecting Sales and Profit:
-Using the popularity scores, I calculated a distribution for daily sales and scaled it up to monthly and six-month projections. To determine profitability, I used the difference between market_price and sale_price as the unit profit for each product. This allowed me to project profits alongside sales, giving a comprehensive view of performance.
-
-Visualizing the Results:
-I created visualizations to make the projections more interpretable. Charts like the top 10 products by profit, category-wise profit distribution, and the relationship between popularity and profit provided intuitive insights into the projections.
-
-Generating a Summary Report:
-To make the results actionable, I implemented a summary report that highlighted key insights, such as total projected profit, the top-performing category, and the average sales per product. This summary is meant to give decision-makers a quick overview of the most important takeaways.
-
-Challenges Faced
-
-One of the main challenges was ensuring the fairness of the popularity score calculation. With multiple factors contributing to the score, it was essential to normalize and weight them appropriately. Too much emphasis on any one factor, such as ratings or category size, would skew the projections. Iterating through different weight combinations and testing the results helped me achieve a balanced scoring mechanism.
-
-Another challenge was translating abstract sales projections into meaningful visualizations. Choosing the right type of charts and ensuring they effectively communicated the insights required trial and error. For instance, representing category-wise profits as a horizontal bar chart made the comparison between categories more intuitive.
-
+This experience was both challenging and fulfilling, as it demonstrated how effective code can translate complex datasets into clear, valuable projections. I am excited about the potential enhancements this module could inspire in future projects.
  
 ### Overview
 This project performs comprehensive data analysis on BigBasket's product dataset, including data cleaning,
