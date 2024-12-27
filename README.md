@@ -69,29 +69,29 @@ The analysis includes product ratings categorization, price analysis, and projec
  
 ### Project Structure
 ├── BigBasket Products.csv     # Input dataset <br>
-├── requirements.txt           # Project dependencies
-└── main.py                   # Main script containing all classes
-    ├── DataProcessor         # Handles data loading and cleaning
-    │   ├── __init__         # Initializes with file path
-    │   ├── loadAndCleanData # Loads and cleans the dataset
-    │   └── _handleOutliers  # Removes price outliers using IQR
-    │
-    ├── DataAnalyzer         # Performs analysis and visualization
-    │   ├── __init__         # Initializes with cleaned data
-    │   ├── generateVisualizations  # Creates data visualizations
-    │   └── generateStatistics      # Computes dataset statistics
-    │
-    ├── ModelTrainer         # Implements ML models
-    │   ├── __init__         # Initializes with cleaned data
-    │   ├── prepareData      # Prepares data for ML models
-    │   └── trainAndEvaluate # Trains and evaluates models
-    │
-    └── SalesProjector       # Projects future sales and profits
-        ├── __init__         # Initializes with data and projection period
-        ├── _calculate_popularity_scores  # Calculates product popularity
-        ├── project_sales    # Projects sales and profits
-        ├── generate_projection_visualizations  # Creates projection charts
-        └── generate_summary_report  # Generates projection summary
+├── requirements.txt           # Project dependencies <br>
+└── main.py                   # Main script containing all classes <br>
+    ├── DataProcessor         # Handles data loading and cleaning <br>
+    │   ├── __init__         # Initializes with file path <br>
+    │   ├── loadAndCleanData # Loads and cleans the dataset <br>
+    │   └── _handleOutliers  # Removes price outliers using IQR <br>
+    │ <br>
+    ├── DataAnalyzer         # Performs analysis and visualization <br>
+    │   ├── __init__         # Initializes with cleaned data <br>
+    │   ├── generateVisualizations  # Creates data visualizations <br>
+    │   └── generateStatistics      # Computes dataset statistics <br>
+    │ <br>
+    ├── ModelTrainer         # Implements ML models <br>
+    │   ├── __init__         # Initializes with cleaned data <br>
+    │   ├── prepareData      # Prepares data for ML models <br>
+    │   └── trainAndEvaluate # Trains and evaluates models <br>
+    │ <br>
+    └── SalesProjector       # Projects future sales and profits <br>
+        ├── __init__         # Initializes with data and projection period <br>
+        ├── _calculate_popularity_scores  # Calculates product popularity <br>
+        ├── project_sales    # Projects sales and profits <br>
+        ├── generate_projection_visualizations  # Creates projection charts <br>
+        └── generate_summary_report  # Generates projection summary <br>
  
 #### Class Functions Documentation
  
